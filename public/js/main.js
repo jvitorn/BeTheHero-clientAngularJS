@@ -3,6 +3,7 @@ angular.module('bethehero', ['ngRoute', 'ui.mask'])
         //routes
         const routeIndex = {
             home: "/home",
+            login: "/home/login"
         }
 
 
@@ -10,6 +11,10 @@ angular.module('bethehero', ['ngRoute', 'ui.mask'])
         //rotas de usuario
         $routeProvider.when(routeIndex.home, {
             templateUrl: 'partials/home.html',
+            controller: 'IndexController'
+        });
+        $routeProvider.when(routeIndex.login, {
+            templateUrl: 'partials/login.html',
             controller: 'IndexController'
         });
 
