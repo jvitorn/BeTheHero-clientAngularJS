@@ -6,8 +6,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bem Vindo ao bethehero</title>
+    <title>Bem Vindo ao BeTheHero</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/utils.css">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/3732f07a5a.js" crossorigin="anonymous"></script>
@@ -22,12 +23,12 @@
 
     <script src="js/main.js"></script>
     <!-- services -->
-    <script src="js/services/services.js"></script>
+    <!-- <script src="js/services/services.js"></script> -->
     <!-- controllers -->
-
+    <script src="js/controllers/indexController.js"></script>
 
     <!-- diretivas -->
-    <script src="js/directives/diretivas.js"></script>
+    <!-- <script src="js/directives/diretivas.js"></script> -->
 
     <!-- cdn animate -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.compat.css" />
@@ -35,5 +36,13 @@
     <!-- sweet alert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
+
+<body class="red">
+
+    <div class="container-fluid">
+        <ng-view></ng-view>
+    </div>
+
+</body>
 
 </html>
