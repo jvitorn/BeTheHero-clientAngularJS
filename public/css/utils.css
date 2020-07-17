@@ -2,6 +2,7 @@
     --red:#e02041;
     --white:#f0f0f5;
     --black:#202228;
+    --gray:#42424e;
 }
 .red{
     background-color: var(--red);
@@ -11,6 +12,9 @@
 }
 .text-black{
     color:var(--black);
+}
+.text-gray{
+    color:var(--gray);
 }
 .bg-red{
     background-color: var(--red);
