@@ -4,7 +4,8 @@ angular.module('bethehero', ['ngRoute', 'ui.mask'])
         const routeIndex = {
             home: "/home",
             login: "/home/login",
-            register: "/home/register"
+            register: "/home/register",
+            incidents: "/home/incidents"
         }
 
 
@@ -22,6 +23,11 @@ angular.module('bethehero', ['ngRoute', 'ui.mask'])
             templateUrl: 'partials/register.html',
             controller: 'IndexController'
         });
+        $routeProvider.when(routeIndex.incidents, {
+            templateUrl: 'partials/incidents.html',
+            controller: 'IndexController'
+        });
+
 
 
         $routeProvider.otherwise({ redirectTo: '/home' });
