@@ -5,7 +5,8 @@ angular.module('bethehero', ['ngRoute', 'ui.mask'])
             home: "/home",
             login: "/home/login",
             register: "/home/register",
-            incidents: "/home/incidents"
+            incidents: "/home/incidents",
+            incident: "/incident/:id"
         }
 
 
@@ -25,6 +26,10 @@ angular.module('bethehero', ['ngRoute', 'ui.mask'])
         });
         $routeProvider.when(routeIndex.incidents, {
             templateUrl: 'partials/incidents.html',
+            controller: 'IndexController'
+        });
+        $routeProvider.when(routeIndex.incident, {
+            templateUrl: 'partials/incident.html',
             controller: 'IndexController'
         });
 

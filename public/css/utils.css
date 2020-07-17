@@ -3,6 +3,7 @@
     --white:#f0f0f5;
     --black:#202228;
     --gray:#42424e;
+    --green:#1ebea5;
 }
 .red{
     background-color: var(--red);
@@ -21,6 +22,9 @@
 }
 .bg-red{
     background-color: var(--red);
+}
+.bg-whats{
+    background-color: var(--green);
 }
 body{
     background-color:var(--red) ;
