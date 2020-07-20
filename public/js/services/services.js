@@ -28,3 +28,10 @@ angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
 
         });
     })
+    .factory('recursoLogin', ($resource, recurso) => {
+        return $resource(recurso.api + '/session', null, {
+            update: {
+                method: 'put'
+            }
+        });
+    })
