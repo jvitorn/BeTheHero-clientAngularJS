@@ -1,6 +1,6 @@
 angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
     .factory('recurso', function () {
-        const APIKey = 'http://localhost:3331/api'
+        const APIKey = 'http://192.168.0.120:3331/api'
 
         return {
             api: APIKey

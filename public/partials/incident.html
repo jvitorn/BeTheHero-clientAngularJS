@@ -1,25 +1,24 @@
 <div class="row text-gray mt-2">
-    <div class="col-12 p-3 text-center  animated  bounceInLeft delay-1s fast">
+    <div class="col-12 p-3 text-center  animated  bounceInLeft  fast">
         <div class="row">
-            <div class="col-6 offset-3 col-sm-3 offset-sm-6  col-md-3 offset-md-5 mb-5  animated zoomIn delay-1s fast">
+            <div class="col-6 offset-3 col-sm-3 offset-sm-6  col-md-3 offset-md-5 mb-5  animated zoomIn  fast">
                 <img src="imgs/logo.svg" alt="Logo BeTheHero" class="img-fluid d-block logo">
             </div>
         </div>
         <h2 class="h2 text-center">Incidente Detectado</h2>
-        <p class="lead text-black animated  bounceInLeft delay-1s fast">
+        <p class="lead text-black animated  bounceInLeft  fast">
             Confira mais informações sobre esse Incident para poder ajudar !
         </p>
     </div>
 </div>
 <div class="row">
     <div class="col-12 ">
-        <div class="jumbotron shadow card border-0 rounded">
+        <div class="jumbotron shadow card border-0 rounded animated  bounceInLeft fast">
             <div class="row no-gutters">
                 <div class="col-md-6">
-                    <img src="https://www.petlove.com.br/dicas/wp-content/uploads/2017/05/cachorro-abandonado-como-resgatar-1280x720.jpg"
-                        class="card-img" alt="...">
+                    <img src="{{incident.url}}" class="card-img" alt="...">
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 ">
                     <div class="card-body text-gray">
                         <h1 class="card-title text-gray">{{incident.title}}</h1>
                         <h5 class="card-subtitle mb-3 text-red"><b>{{incident.ong}}</b></h5>
