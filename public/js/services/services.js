@@ -17,3 +17,14 @@ angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
 
         });
     })
+    .factory('recursoOng', ($resource, recurso) => {
+        return $resource(recurso.api + '/ongs/:ongId', null, {
+            update: {
+                method: 'put'
+            },
+            query: {
+                method: 'get'
+            }
+
+        });
+    })
