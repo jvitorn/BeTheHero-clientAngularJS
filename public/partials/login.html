@@ -15,19 +15,20 @@
                     <div class="col-md-8 offset-md-2 col-12">
                         <div class="form-group animated zoomIn delay-1s fast">
                             <label for="">Email</label>
-                            <input type="email" class="form-control" placeholder="Email Institucional">
+                            <input type="email" ng-model="usuario.email" class="form-control"
+                                placeholder="Email Institucional">
                         </div>
                         <div class="form-group animated zoomIn delay-1s fast">
                             <label for="">Password</label>
-                            <input type="password" class="form-control" placeholder="Senha">
+                            <input type="password" ng-model="usuario.password" class="form-control" placeholder="Senha">
                         </div>
                         <!-- buttom -->
                         <div class="row  mb-2">
                             <div class="col-12 col-sm-12 col-md-6   animated  bounceInLeft delay-1s fast ">
-                                <a href="/ong/perfil"
-                                    class="btn btn-block bg-red text-white mx-auto shadow   p-3 mt-3 mb-3">
+                                <button class="btn btn-block bg-red text-white mx-auto shadow   p-3 mt-3 mb-3"
+                                    ng-click="logar(usuario)">
                                     Logar
-                                </a>
+                                </button>
                             </div>
                             <div class="col-12 col-sm-12 col-md-6   animated  bounceInRight delay-1s fast ">
                                 <a class="btn btn-block  bg-dark text-white mx-auto shadow   p-3 mt-3 mb-3"

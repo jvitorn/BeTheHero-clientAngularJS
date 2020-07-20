@@ -18,7 +18,7 @@ angular.module('bethehero', ['ngRoute', 'meusServicos', 'ui.mask'])
         });
         $routeProvider.when(routeIndex.login, {
             templateUrl: 'partials/login.html',
-            controller: 'IndexController'
+            controller: 'LoginController'
         });
         $routeProvider.when(routeIndex.register, {
             templateUrl: 'partials/register.html',
