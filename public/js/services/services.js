@@ -5,4 +5,11 @@ angular.module('meusServicos', ['ngResource', 'ngCookies'])
         return {
             api: APIKey
         }
-    })  
+    })
+    .factory('recursoIncident', function ($resource, recurso) {
+        return $resource(recurso.api + '/incidents/:incidentId', null, {
+            update: {
+                method: 'put'
+            }
+        });
+    })
