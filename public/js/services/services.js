@@ -59,7 +59,7 @@ angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
                 else {
                     recursoOng.save(ong, () => {
                         resolve({
-                            mensagem: 'ONG ' + ong.title + ' Incluida com sucesso ',
+                            mensagem: 'ONG ' + ong.id + ' Incluida com sucesso ',
                             inclusao: true
                         });
                     }, function (error) {
