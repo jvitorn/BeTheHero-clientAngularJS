@@ -22,7 +22,7 @@ angular.module('bethehero', ['ngRoute', 'meusServicos', 'ui.mask'])
         });
         $routeProvider.when(routeIndex.register, {
             templateUrl: 'partials/register.html',
-            controller: 'IndexController'
+            controller: 'RegisterController'
         });
         $routeProvider.when(routeIndex.incidents, {
             templateUrl: 'partials/incidents.html',
