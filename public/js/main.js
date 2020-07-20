@@ -1,4 +1,4 @@
-angular.module('bethehero', ['ngRoute', 'ui.mask'])
+angular.module('bethehero', ['ngRoute', 'meusServicos', 'ui.mask'])
     .config(($routeProvider, $locationProvider) => {
         //routes
         const routeIndex = {

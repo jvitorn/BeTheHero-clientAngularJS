@@ -1,4 +1,4 @@
-angular.module('bethehero').controller('IndexController', function ($scope) {
+angular.module('bethehero').controller('IndexController', function ($scope, recurso) {
 
 
-})
+})  
