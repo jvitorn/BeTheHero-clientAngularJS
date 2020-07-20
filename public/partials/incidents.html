@@ -12,51 +12,18 @@
     </div>
     <div class="col-12 mt-2 mb-3">
         <div class="row">
-            <div class="col-sm-12 col-12 col-md-4 animated  fadeInUp delay-1s fast">
+            <div class="col-sm-12 col-12 col-md-4 incidents animated  fadeInUp delay-1s fast"
+                ng-repeat="incident in incidents">
                 <div class="jumbotron card border-0 bg-red">
-                    <img src="https://tamarthi.com.br/wp-content/uploads/2019/12/como-abrir-uma-ong.jpg"
-                        class="img-fluid rounded img-thumbnail" alt="foto do evento">
+                    <img src="{{incident.url}}" class="img-fluid rounded img-thumbnail" alt="foto do evento">
                     <div class="card-body">
-                        <h5 class="card-title text-white">Cachorrinho Abandonado</h5>
-                        <h6 class="card-subtitle mb-2 text-gray">APAD</h6>
-
+                        <h5 class="card-title text-white">{{incident.title}}</h5>
+                        <h6 class="card-subtitle mb-2 text-gray">{{incident.ongId}}</h6>
                     </div>
                     <div class="card-footer border-0 bg-transparent">
-                        <a href="incident/1" class="btn  btn-block bg-dark text-white mx-auto p-3">
+                        <a href="incident/{{incident._id}}" class="btn  btn-block bg-dark text-white mx-auto p-3">
                             Veja Mais <i class="fas fa-arrow-right"></i>
                         </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-12 col-md-4 animated  fadeInUp delay-1s fast">
-                <div class="jumbotron card border-0 bg-red ">
-                    <img src="https://tamarthi.com.br/wp-content/uploads/2019/12/como-abrir-uma-ong.jpg"
-                        class="img-fluid rounded" alt="foto do evento">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">Cachorrinho Abandonado</h5>
-                        <h6 class="card-subtitle mb-2 text-gray">APAD</h6>
-
-                    </div>
-                    <div class="card-footer border-0 bg-transparent">
-                        <button class="btn  btn-block bg-dark text-white mx-auto p-3">
-                            Veja Mais <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-12 col-md-4 animated  fadeInUp delay-1s fast">
-                <div class="jumbotron card border-0 bg-red">
-                    <img src="https://tamarthi.com.br/wp-content/uploads/2019/12/como-abrir-uma-ong.jpg"
-                        class="img-fluid rounded" alt="foto do evento">
-                    <div class="card-body">
-                        <h5 class="card-title text-white">Cachorrinho Abandonado</h5>
-                        <h6 class="card-subtitle mb-2 text-gray">APAD</h6>
-
-                    </div>
-                    <div class="card-footer border-0 bg-transparent">
-                        <button class="btn  btn-block bg-dark text-white mx-auto p-3">
-                            Veja Mais <i class="fas fa-arrow-right"></i>
-                        </button>
                     </div>
                 </div>
             </div>

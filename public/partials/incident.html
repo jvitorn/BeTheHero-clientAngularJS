@@ -21,19 +21,15 @@
                 </div>
                 <div class="col-md-6">
                     <div class="card-body text-gray">
-                        <h1 class="card-title text-gray">Cachorrinho Abandonado</h1>
+                        <h1 class="card-title text-gray">{{incident.title}}</h1>
                         <h5 class="card-subtitle mb-3 text-red"><b>APAD</b></h5>
-                        <p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
-                            assumenda dolore deleniti quibusdam voluptate placeat a laborum sunt sint eaque molestias
-                            explicabo, nam reiciendis dolorum eius voluptatum. Quibusdam, nostrum praesentium.Quis eos
-                            mollitia minus unde magnam quibusdam reprehenderit qui vel omnis provident, aliquid, aut ex
-                            repellendus porro inventore repudiandae. Dolore vero qui dolores, corrupti perspiciatis unde
-                            cupiditate explicabo delectus architecto.</p>
+                        <p class="card-text">{{incident.description}}</p>
 
                         <p class="card-text"><small class="text-muted">Last updated 3 mins ago
                             </small></p>
                         <div class="card-footer border-0 bg-transparent">
-                            <button class="btn btn-block bg-whats text-white mx-auto p-4">
+                            <button class="btn btn-block bg-whats text-white mx-auto p-4"
+                                ng-click="enviarMsg(incident.whatsapp)">
                                 Entrar em Contato <i class="fab fa-whatsapp"></i>
                             </button>
                         </div>

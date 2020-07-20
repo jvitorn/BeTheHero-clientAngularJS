@@ -1,4 +1,4 @@
-angular.module('meusServicos', ['ngResource', 'ngCookies'])
+angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
     .factory('recurso', function () {
         const APIKey = 'http://localhost:3331/api'
 
@@ -6,10 +6,14 @@ angular.module('meusServicos', ['ngResource', 'ngCookies'])
             api: APIKey
         }
     })
-    .factory('recursoIncident', function ($resource, recurso) {
+    .factory('recursoIncident', ($resource, recurso) => {
         return $resource(recurso.api + '/incidents/:incidentId', null, {
             update: {
                 method: 'put'
+            },
+            query: {
+                method: 'get'
             }
+
         });
     })
