@@ -35,3 +35,41 @@ angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
             }
         });
     })
+    .factory('cadastroDeOng', (recursoOng, $q) => {
+
+        let servico = {}
+
+        servico.cadastrar = (ong) => {
+            return $q(function (resolve, reject) {
+                //caso existir esse id ele ira atualizar as informações 
+                if (ong._id) {
+                    recursoOng.update({ id: ong._id }, ong, () => {
+                        resolve({
+                            mensagem: 'ONG: ' + ong.title + ' atualizada com sucesso!',
+                            inclusao: false
+                        });
+                    }, function (error) {
+                        console.log(error)
+                        reject({
+                            mensagem: 'Não foi possivel alterar os dados da ONG' + livro.title
+                        });
+                    });
+                }
+                //se nao existir ele ira criar uma nova informação de livro no banco 
+                else {
+                    recursoOng.save(ong, () => {
+                        resolve({
+                            mensagem: 'ONG ' + ong.title + ' Incluida com sucesso ',
+                            inclusao: true
+                        });
+                    }, function (error) {
+                        console.log(error)
+                        reject({
+                            mensagem: 'Não foi possivel cadastrar a ONG ' + ong.title
+                        });
+                    })
+                }
+            })
+        }
+        return servico
+    })
