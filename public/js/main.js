@@ -6,7 +6,8 @@ angular.module('bethehero', ['ngRoute', 'meusServicos', 'ui.mask'])
             login: "/home/login",
             register: "/home/register",
             incidents: "/home/incidents",
-            incident: "/incident/:id"
+            incident: "/incident/:id",
+            perfil: "/home/perfil"
         }
 
 
@@ -14,6 +15,10 @@ angular.module('bethehero', ['ngRoute', 'meusServicos', 'ui.mask'])
         //rotas de usuario
         $routeProvider.when(routeIndex.home, {
             templateUrl: 'partials/home.html',
+            controller: 'IndexController'
+        });
+        $routeProvider.when(routeIndex.perfil, {
+            templateUrl: 'partials/perfil.html',
             controller: 'IndexController'
         });
         $routeProvider.when(routeIndex.login, {
