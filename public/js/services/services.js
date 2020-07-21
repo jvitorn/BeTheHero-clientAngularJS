@@ -88,3 +88,41 @@ angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
         }
         return servico
     })
+    .factory('cadastroDeIncident', (recursoIncident, $q) => {
+        let servico = {}
+
+        servico.cadastrar = (incident) => {
+            return $q(function (resolve, reject) {
+                //caso existir esse id ele ira atualizar as informações
+                if (incident._id) {
+                    recursoIncident.update({ incidentId: incident._id }, incident, () => {
+                        resolve({
+                            mensagem: 'CASO: ' + incident.title + ' atualizado com sucesso!',
+                            inclusao: false
+                        });
+                    }, function (error) {
+                        console.log(error)
+                        reject({
+                            mensagem: 'Não foi possivel alterar os dados do CASO' + incident.title
+                        });
+                    });
+                }
+                //se nao existir ele ira criar uma nova informação de incident no banco 
+                else {
+                    recursoIncident.save(incident, () => {
+                        resolve({
+                            mensagem: 'CASO: ' + incident._id + ' Incluido com sucesso ',
+                            inclusao: true
+                        });
+                    }, function (error) {
+                        console.log(error)
+                        reject({
+                            mensagem: 'Não foi possivel cadastrar o CASO: ' + incident.title
+                        });
+                    })
+                }
+            })
+        }
+
+        return servico
+    })

@@ -1,3 +1,4 @@
-angular.module('bethehero').controller('NewIncidentController', function (verify) {
+angular.module('bethehero').controller('NewIncidentController', function ($scope, verify) {
     verify.teste
+
 })
