@@ -1,4 +1,14 @@
 angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
+    .factory('verify', ($cookies, $location) => {
+        function verify() {
+            if ($location.path() == '/home/perfil' && $cookies.get('x-access-token') || $location.path() == '/newIncident' && $cookies.get('x-access-token')) {
+            } else {
+                $location.path('home/login')
+            }
+
+        }
+        return { teste: verify() }
+    })
     .factory('recurso', () => {
         const APIKey = 'http://192.168.0.120:3331/api'
 
