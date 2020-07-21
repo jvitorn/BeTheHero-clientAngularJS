@@ -40,7 +40,7 @@ angular.module('bethehero', ['ngRoute', 'meusServicos', 'ui.mask'])
         });
         $routeProvider.when(routeIndex.newIncident, {
             templateUrl: 'partials/newIncident.html',
-            controller: 'IncidentController'
+            controller: 'NewIncidentController'
         });
 
 

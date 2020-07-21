@@ -1,9 +1,14 @@
 angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
-    .factory('recurso', function () {
+    .factory('recurso', () => {
         const APIKey = 'http://192.168.0.120:3331/api'
 
         return {
             api: APIKey
+        }
+    })
+    .factory('gerarToken', ($cookies) => {
+        return (token) => {
+            $cookies.put('x-test', token)
         }
     })
     .factory('recursoIncident', ($resource, recurso) => {
