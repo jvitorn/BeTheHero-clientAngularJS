@@ -1,4 +1,4 @@
-angular.module('bethehero').controller('LoginController', function ($scope, recursoLogin, gerarToken) {
+angular.module('bethehero').controller('LoginController', function ($scope, recursoLogin, gerarToken, $location) {
 
     $scope.logar = (usuario) => {
         recursoLogin.save(usuario, (session) => {
@@ -6,6 +6,7 @@ angular.module('bethehero').controller('LoginController', function ($scope, recu
             const token = gerarToken
             //capturando token
             token(session.token)
+            $location.path('home/perfil')
         }, erro => console.error(erro))
 
     }
