@@ -8,7 +8,7 @@ angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
     })
     .factory('gerarToken', ($cookies) => {
         return (token) => {
-            $cookies.put('x-test', token)
+            $cookies.put('x-access-token', token)
         }
     })
     .factory('recursoIncident', ($resource, recurso) => {
