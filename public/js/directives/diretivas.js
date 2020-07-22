@@ -14,3 +14,19 @@ angular.module('myDirectives', [])
 
         return ddo;
     })
+    .directive('foto', () => {
+
+        let ddo = {};
+
+        ddo.restrict = "AE"
+
+        ddo.scope = {
+            titulo: '@',
+            url: '@',
+            classe: '@'
+        }
+
+        ddo.template = '<img src="{{url}}" alt="{{titulo}}" class="{{classe}}">'
+
+        return ddo;
+    })
