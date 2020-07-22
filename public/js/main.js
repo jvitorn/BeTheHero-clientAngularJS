@@ -8,7 +8,6 @@ angular.module('bethehero', ['ngRoute', 'meusServicos', 'ui.mask'])
             incidents: "/home/incidents",
             incident: "/incident/:id",
             newIncident: "/newIncident",
-            editIncident: "/newIncident/edit/:id",
             perfil: "/home/perfil"
         }
 
@@ -40,10 +39,6 @@ angular.module('bethehero', ['ngRoute', 'meusServicos', 'ui.mask'])
             controller: 'IncidentController'
         });
         $routeProvider.when(routeIndex.newIncident, {
-            templateUrl: 'partials/newIncident.html',
-            controller: 'NewIncidentController'
-        });
-        $routeProvider.when(routeIndex.editIncident, {
             templateUrl: 'partials/newIncident.html',
             controller: 'NewIncidentController'
         });

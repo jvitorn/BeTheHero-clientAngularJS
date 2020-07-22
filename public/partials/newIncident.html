@@ -7,9 +7,9 @@
                 <img src="imgs/logo.svg" alt="Logo BeTheHero" class="img-fluid">
             </div>
             <div class="col-12 col-md-8 offset-md-2 text-center">
-                <h2 class="h2 text-center animated  bounceInLeft delay-1s fast">Cadastrar Novo Caso</h2>
+                <h2 class="h2 text-center animated  bounceInLeft delay-1s fast">{{incident.titulo}}</h2>
                 <p class="lead text-black animated  bounceInLeft delay-1s fast">
-                    Descreva detalhadamente para que apareça um Heroi.
+                    {{incident.descricao}}
                 </p>
             </div>
         </div>
@@ -36,7 +36,7 @@
                             <div class="col-12 col-sm-12 col-md-6   animated  bounceInLeft delay-1s fast ">
                                 <button class="btn btn-block bg-red text-white mx-auto shadow   p-3 mt-3 mb-3"
                                     ng-click="caso(usuario)">
-                                    Cadastrar Caso
+                                    {{incident.botao}} Caso
                                 </button>
                             </div>
                             <div class="col-12 col-sm-12 col-md-6   animated  bounceInRight delay-1s fast ">
