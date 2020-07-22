@@ -1,8 +1,16 @@
-angular.module('meusServicos', ['ngResource', 'ngCookies'])
-    .factory('recurso', function () {
-        const APIKey = 'http://localhost:3331'
+angular.module('myDirectives', [])
+    .directive('imgTemp', () => {
 
-        return {
-            api: APIKey
+        let ddo = {};
+
+        ddo.restrict = "AE"
+
+        ddo.scope = {
+            titulo: '@',
+            url: '@'
         }
-    })  
+
+        ddo.template = '<img src="{{url}}" alt="{{titulo}}" class="img-fluid d-block logo">'
+
+        return ddo;
+    })
