@@ -28,5 +28,24 @@ angular.module('myDirectives', [])
 
         ddo.template = '<img src="{{url}}" alt="{{titulo}}" class="{{classe}}">'
 
-        return ddo;
+        return ddo
+    })
+    .directive('cardHorizonal', () => {
+
+        let ddo = {}
+
+        ddo.restrict = "AE"
+
+        ddo.scope = {
+            url: '@',
+            imagem: '@',
+            classe: '@',
+            title: '@',
+            ong: '@',
+            description: '@'
+        }
+
+        ddo.templateUrl = 'js/directives/model/cardHorizontal.html'
+
+        return ddo
     })
