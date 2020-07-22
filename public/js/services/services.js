@@ -1,4 +1,16 @@
 angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
+    .factory('setInfoUser', ($cookies) => {
+        return () => {
+            const refaturandoToken = $cookies.get('x-access-token').split('.')
+            //capturando a parte de informação do usuario 
+            const infoUser = JSON.parse(atob(refaturandoToken[1]))
+
+            // Setting a localStorage
+            localStorage.setItem('userID', infoUser.userID)
+            localStorage.setItem('userName', infoUser.userName)
+        }
+
+    })
     .factory('verify', ($cookies, $location) => {
         function verify() {
             if ($location.path() == '/home/perfil' && $cookies.get('x-access-token') || $location.path() == '/newIncident' && $cookies.get('x-access-token')) {
