@@ -8,8 +8,7 @@ angular.module('bethehero').controller('LoginController', function ($scope, $coo
             token(session.token)
             //test
             setInfoUser()
-
-            //$location.path('home/perfil')
+            $location.path('home/perfil')
         }, erro => console.error(erro))
 
     }

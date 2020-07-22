@@ -4,13 +4,13 @@ angular.module('bethehero').controller('NewIncidentController', function ($scope
     if ($routeParams.id) {
         recursoIncident.get({ incidentId: $routeParams.id }, (results) => {
             $scope.usuario = results.results
-            console.log($scope.usuario)
+
         })
 
         $scope.incident.titulo = "Editar Caso"
         $scope.incident.descricao = 'Edite o caso do incidente caso for necessario!'
         $scope.incident.botao = 'Editar'
-        console.log($scope.incident)
+
     } else {
         $scope.incident.titulo = "Cadastrar Novo Caso"
         $scope.incident.descricao = 'Descreva detalhadamente para que apareça um Heroi.'

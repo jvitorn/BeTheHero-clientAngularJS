@@ -4,7 +4,7 @@
         <div class="row">
             <!-- Logo -->
             <div class="col-6 offset-3 col-sm-3 offset-sm-6  col-md-4 offset-md-4 mb-5 animated zoomIn delay-1s fast">
-                <img src="imgs/logo.svg" alt="Logo BeTheHero" class="img-fluid">
+                <img ng-src="{{ usuario.url || 'imgs/logo.svg'}}" alt="Logo BeTheHero " class="img-fluid">
             </div>
             <div class="col-12 col-md-8 offset-md-2 text-center">
                 <h2 class="h2 text-center animated  bounceInLeft delay-1s fast">{{incident.titulo}}</h2>
@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8 col-12 ">
+            <div class="col-md-7 col-12 ">
                 <div class="row">
 
                     <div class="col-md-12  col-12">
@@ -49,7 +49,7 @@
                 </div>
 
             </div>
-            <div class="col-md-4 col-12">
+            <div class="col-md-5 col-12">
                 <div class="row">
                     <div class="col-12 col-sm-12   col-md-12 animated zoomIn delay-1s fast">
                         <img src="imgs/heroes.png" alt="Logo BeTheHero" class="img-fluid">
