@@ -1,10 +1,14 @@
-angular.module('bethehero').controller('NewIncidentController', function ($scope, verify, cadastroDeIncident) {
+angular.module('bethehero').controller('NewIncidentController', function ($scope, verify, getId, cadastroDeIncident) {
     verify.teste
 
     $scope.caso = (usuario) => {
+
+        const get = getId
+        usuario.ongId = get()
         cadastroDeIncident.cadastrar(usuario)
             .then(incident => {
-                const mensagem = incident.mensagem;
+                const mensagem = incident.mensagem
+
                 // sweet alert
                 Swal.fire({
                     title: 'Caso:',
@@ -13,7 +17,7 @@ angular.module('bethehero').controller('NewIncidentController', function ($scope
                 })
             })
             .catch(erro => {
-                const mensagem = erro.mensagem;
+                const mensagem = erro.mensagem
                 // sweet alert
                 Swal.fire({
                     title: 'Caso:',

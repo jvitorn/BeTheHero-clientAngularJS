@@ -1,4 +1,16 @@
 angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
+    .factory('getId', ($cookies) => {
+
+        return () => {
+            const refaturandoToken = $cookies.get('x-access-token').split('.')
+            //capturando a parte de informação do usuario 
+            const infoUser = JSON.parse(atob(refaturandoToken[1]))
+
+            // Setting a localStorage
+
+            return infoUser.userID
+        }
+    })
     .factory('setInfoUser', ($cookies) => {
         return () => {
             const refaturandoToken = $cookies.get('x-access-token').split('.')

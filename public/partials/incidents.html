@@ -1,19 +1,18 @@
 <div class="row text-gray mt-2">
-    <div class="col-12 p-3 text-center  animated  bounceInLeft delay-1s fast">
+    <div class="col-12 p-3 text-center  animated  bounceInLeft  fast">
         <div class="row">
-            <div class="col-6 offset-3 col-sm-3 offset-sm-6  col-md-3 offset-md-5 mb-5  animated zoomIn delay-1s fast">
+            <div class="col-6 offset-3 col-sm-3 offset-sm-6  col-md-3 offset-md-5 mb-5  animated zoomIn  fast">
                 <img src="imgs/logo.svg" alt="Logo BeTheHero" class="img-fluid d-block logo">
             </div>
         </div>
         <h2 class="h2 text-center">Incidentes</h2>
-        <p class="lead text-black animated  bounceInLeft delay-1s fast">
+        <p class="lead text-black animated  bounceInLeft fast">
             Confira os Incidentes postados pelas Instituições Sociais e ajude !
         </p>
     </div>
     <div class="col-12 mt-2 mb-3">
         <div class="row">
-            <div class="col-sm-12 col-12 col-md-4 incidents animated  fadeInUp delay-1s fast"
-                ng-repeat="incident in incidents">
+            <div class="col-sm-12 col-12 col-md-4 incidents animated  fadeInUp fast" ng-repeat="incident in incidents">
                 <div class="jumbotron card border-0 bg-red">
                     <img src="{{incident.url}}" class="img-fluid rounded img-thumbnail" alt="foto do evento">
                     <div class="card-body">
