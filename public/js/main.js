@@ -8,7 +8,8 @@ angular.module('bethehero', ['myDirectives', 'ngRoute', 'meusServicos', 'ui.mask
             incidents: "/home/incidents",
             incident: "/incident/:id",
             newIncident: "/newIncident",
-            perfil: "/home/perfil"
+            perfil: "/home/perfil",
+            adm: "/home/adm"
         }
 
 
@@ -21,6 +22,10 @@ angular.module('bethehero', ['myDirectives', 'ngRoute', 'meusServicos', 'ui.mask
         $routeProvider.when(routeIndex.perfil, {
             templateUrl: 'partials/perfil.html',
             controller: 'IndexController'
+        });
+        $routeProvider.when(routeIndex.adm, {
+            templateUrl: 'partials/adm.html',
+            controller: 'AdmController'
         });
         $routeProvider.when(routeIndex.login, {
             templateUrl: 'partials/login.html',

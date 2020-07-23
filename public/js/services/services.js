@@ -25,7 +25,7 @@ angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
     })
     .factory('verify', ($cookies, $location) => {
         function verify() {
-            if ($location.path() == '/home/perfil' && $cookies.get('x-access-token') || $location.path() == '/newIncident' && $cookies.get('x-access-token')) {
+            if ($location.path() == '/home/perfil' && $cookies.get('x-access-token') || $location.path() == '/newIncident' && $cookies.get('x-access-token') || $location.path() == '/home/adm' && $cookies.get('x-access-token')) {
             } else {
                 $location.path('home/login')
             }
