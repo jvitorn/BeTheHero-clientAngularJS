@@ -23,6 +23,9 @@
 .bg-red{
     background-color: var(--red);
 }
+.bd-gray{
+    background-color: var(--gray);
+}
 .bg-whats{
     background-color: var(--green);
 }
@@ -54,3 +57,39 @@ body{
     font-size: 12px; 
     text-align: center; 
 } 
+.card-img-top{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 76%;
+    height:200px;
+    max-height: 50%;
+    display: block;
+    border: 2px solid var(--white) ;
+}
+.card{
+   
+     padding: 50px;
+    max-height: 420px;
+    height:420px;
+    overflow: hidden;
+    margin-bottom: 2.5rem;
+    
+}
+  /* mobile */
+  @media only screen and (max-width: 765px) {
+   
+    .card{
+     padding: 25px!important;
+     max-height: 700px;
+     height:700px;
+     overflow: hidden;
+     margin-bottom: 2.5rem;
+    }
+    .card-img-top{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 50%;
+        height: auto;
+        max-height: 60%;
+    }
+}
