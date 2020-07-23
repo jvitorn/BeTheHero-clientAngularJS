@@ -16,6 +16,7 @@ angular.module('bethehero').controller('IncidentController', function ($scope, r
         })
 
         $scope.enviarMsg = () => {
+
             const txt = 'Olá ' + $scope.incident.ong + ' Estou interessado no caso "' + $scope.incident.title.toUpperCase() + '".Quero saber mais sobre isso para poder os ajudar !!'
             window.location.href = 'https://api.whatsapp.com/send?phone=' + $scope.incident.whatsapp + '&text=' + txt
         }
