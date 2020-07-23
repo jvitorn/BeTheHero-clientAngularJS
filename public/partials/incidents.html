@@ -13,18 +13,19 @@
     <div class="col-12 mt-2 mb-3">
         <div class="row">
             <div class="col-sm-12 col-12 col-md-4 incidents animated  fadeInUp fast" ng-repeat="incident in incidents">
-                <div class="jumbotron card border-0 bg-gray shadow-lg">
-                    <img src="{{incident.url}}" class="card-img-top" alt="foto do evento">
-                    <div class="card-body">
-                        <h5 class="card-title text-danger">{{incident.title}}</h5>
-                        <h6 class="card-subtitle mb-2 text-gray">{{incident.ong}}</h6>
+                <a href="incident/{{incident._id}}">
+                    <div class="card-incident border-0 bg-red  rounded shadow overflow-hidden animated pulse low">
+                        <img src="{{incident.url}}" class="card-img-top my-auto">
+                        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+                            <div>
+                                <h5 class="card-text whitered-bg text-gray">
+                                    {{incident.title}}
+                                </h5>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-footer border-0 bg-transparent">
-                        <a href="incident/{{incident._id}}" class="btn  btn-block bg-dark text-white mx-auto p-3">
-                            Veja Mais <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
+                </a>
+
             </div>
         </div>
     </div>

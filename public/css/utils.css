@@ -60,36 +60,37 @@ body{
 .card-img-top{
     margin-left: auto;
     margin-right: auto;
-    max-width: 76%;
+    max-width: 96%;
     height:200px;
-    max-height: 50%;
+    max-height: 90%;
     display: block;
-    border: 2px solid var(--white) ;
 }
-.card{
-   
+.card-incident{
      padding: 50px;
-    max-height: 420px;
-    height:420px;
+    max-height: 280px;
+    height:280px;
     overflow: hidden;
     margin-bottom: 2.5rem;
     
 }
-  /* mobile */
-  @media only screen and (max-width: 765px) {
-   
-    .card{
-     padding: 25px!important;
-     max-height: 700px;
-     height:700px;
-     overflow: hidden;
-     margin-bottom: 2.5rem;
-    }
-    .card-img-top{
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 50%;
-        height: auto;
-        max-height: 60%;
-    }
+.card-text.whitered-bg {
+    display: inline;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(to bottom,var(--white) 90%,var(--red) 10%);
+}
+
+.card-incident:hover>img:first-child,
+.card-img:hover {
+    transition: all .1s ease-in-out;
+    filter: brightness(85%);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.eventos-card-row{
+    padding-bottom: 90px;
 }
