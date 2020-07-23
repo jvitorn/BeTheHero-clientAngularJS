@@ -82,15 +82,15 @@ angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
             return $q(function (resolve, reject) {
                 //caso existir esse id ele ira atualizar as informações 
                 if (ong._id) {
-                    recursoOng.update({ id: ong._id }, ong, () => {
+                    recursoOng.update({ ongId: ong._id }, ong, () => {
                         resolve({
-                            mensagem: 'ONG: ' + ong.title + ' atualizada com sucesso!',
+                            mensagem: 'ONG: atualizada com sucesso!',
                             inclusao: false
                         });
                     }, function (error) {
                         console.log(error)
                         reject({
-                            mensagem: 'Não foi possivel alterar os dados da ONG' + livro.title
+                            mensagem: 'Não foi possivel alterar os dados da ONG' + ong.title
                         });
                     });
                 }
