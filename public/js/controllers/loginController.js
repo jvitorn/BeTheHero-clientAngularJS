@@ -9,7 +9,7 @@ angular.module('bethehero').controller('LoginController', function ($scope, $coo
             //test
             setInfoUser()
             $location.path('home/perfil')
-        }, erro => console.error(erro))
+        })
 
     }
 
