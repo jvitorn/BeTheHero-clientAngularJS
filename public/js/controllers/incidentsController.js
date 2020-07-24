@@ -1,8 +1,7 @@
-angular.module('bethehero').controller('IncidentsController', function ($scope, recursoIncident, recursoOng) {
+angular.module('bethehero').controller('IncidentsController', function ($scope, $location, recursoIncident, recursoOng) {
     recursoIncident.query((incidents) => {
         $scope.incidents = incidents.results
 
-        console.log(incidents.results.length)
 
 
         for (let c = 0; c <= incidents.results.length; c++) {
@@ -13,5 +12,11 @@ angular.module('bethehero').controller('IncidentsController', function ($scope, 
             })
         }
     })
+
+
+    $scope.verIncident = (incident) => {
+
+        $location.path('/incident/' + incident)
+    }
 
 })  
