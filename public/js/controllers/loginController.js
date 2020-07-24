@@ -1,4 +1,4 @@
-angular.module('bethehero').controller('LoginController', function ($scope, $cookies, recursoLogin, gerarToken, setInfoUser, $location) {
+angular.module('bethehero').controller('LoginController', function ($scope, recursoLogin, gerarToken, setInfoUser, $location) {
 
     $scope.logar = (usuario) => {
         recursoLogin.save(usuario, (session) => {
