@@ -1,3 +1,3 @@
-angular.module('bethehero').controller('VerOngController', function () {
+angular.module('bethehero').controller('VerOngController', function ($scope) {
 
 })

@@ -56,6 +56,17 @@ angular.module('meusServicos', ['ngResource', 'meusServicos', 'ngCookies'])
 
         });
     })
+    .factory('incidentByOng', ($resource, recurso) => {
+        return $resource(recurso.api + '/incident/:ongId', null, {
+            update: {
+                method: 'put'
+            },
+            query: {
+                method: 'get'
+            }
+
+        });
+    })
     .factory('recursoOng', ($resource, recurso) => {
         return $resource(recurso.api + '/ongs/:ongId', null, {
             update: {

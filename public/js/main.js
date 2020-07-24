@@ -9,7 +9,8 @@ angular.module('bethehero', ['myDirectives', 'ngRoute', 'meusServicos', 'ui.mask
             incident: "/incident/:id",
             newIncident: "/newIncident",
             perfil: "/home/perfil",
-            adm: "/home/adm"
+            adm: "/home/adm",
+            verOng: "/home/verOng/:id"
         }
 
 
@@ -46,6 +47,10 @@ angular.module('bethehero', ['myDirectives', 'ngRoute', 'meusServicos', 'ui.mask
         $routeProvider.when(routeIndex.newIncident, {
             templateUrl: 'partials/newIncident.html',
             controller: 'NewIncidentController'
+        });
+        $routeProvider.when(routeIndex.verOng, {
+            templateUrl: 'partials/verOng.html',
+            controller: 'VerOngController'
         });
 
 

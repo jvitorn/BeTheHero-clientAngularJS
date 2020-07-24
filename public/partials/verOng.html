@@ -5,9 +5,30 @@
                 <img-Temp url="imgs/logo.svg" titulo="Logo BeTheHero"></img-Temp>
             </div>
         </div>
-        <h2 class="h2 text-center">Bem Vindo</h2>
+        <h2 class="h2 text-center">ONG</h2>
         <p class="lead text-black animated  bounceInLeft delay-1s fast">
-            Confira mais informações sobre a sua Organição,crie ações,denuncie algo,atualize suas informações,etc... !
+            Estas são os casos Gerenciados por esta Organização Social... !
         </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-12 mt-2 mb-3">
+        <div class="row">
+            <div class="col-sm-12 col-12 col-md-4 incidents animated  fadeInUp fast" ng-repeat="incident in incidents">
+                <a href="incident/{{incident._id}}">
+                    <div class="card-incident border-0 bg-red  rounded shadow overflow-hidden animated pulse low">
+                        <img src="{{incident.url}}" class="card-img-top my-auto">
+                        <div class="card-img-overlay h-100 d-flex flex-column justify-content-end">
+                            <div>
+                                <h5 class="card-text whitered-bg text-gray" ng-click="perfil(incident.ongId)">
+                                    {{incident.title}}
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
     </div>
 </div>
