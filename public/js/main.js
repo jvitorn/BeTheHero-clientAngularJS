@@ -43,7 +43,7 @@ angular.module('bethehero', ['myDirectives', 'ngRoute', 'meusServicos', 'ui.mask
         });
         $routeProvider.when(routeIndex.myIncients, {
             templateUrl: 'partials/casosOng.html',
-            controller: 'IncidentsController'
+            controller: 'MyIncidentController'
         });
         $routeProvider.when(routeIndex.incident, {
             templateUrl: 'partials/incident.html',

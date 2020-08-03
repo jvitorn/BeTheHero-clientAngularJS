@@ -12,52 +12,87 @@
     </div>
 </div>
 <div class="row text-gray mt-2">
-    <div class="col-md-3 col-12">
+    <div class="col-md-3 col-12" ng-repeat="incident in incidents">
         <div class="card bg-transparent text-right border-0 rounded shadow">
-            <foto url="http://wpthemecube.com/eventr_html/img/hotel-img1.png"
-                classe="img-thumbnail bg-transparent border-0 " titulo="Foto do Card"></foto>
+            <foto url="{{incident.url}}" classe="img-thumbnail bg-transparent border-0 " titulo="Foto do Card"></foto>
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <button type="button" class="btn btn-outline-dark"><i class="fas fa-eye"></i></button>
+                <h5 class="card-title">{{incident.title}}</h5>
+            </div>
+            <div class="card-footer bg-transparent">
+                <button type="button" class="btn btn-outline-dark" data-toggle="modal" data-target="#exampleModal"><i
+                        class="fas fa-eye"></i></button>
                 <button type="button" class="btn btn-outline-primary"><i class="fas fa-edit"></i></button>
-                <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i></button>
+                <button type="button" class="btn btn-outline-danger" data-toggle="modal"
+                    data-target="#desativarModal"><i class="fas fa-trash"></i></button>
             </div>
         </div>
     </div>
-    <div class="col-md-3 col-12">
-        <div class="card bg-transparent text-right border-0 rounded shadow">
-            <foto url="http://wpthemecube.com/eventr_html/img/hotel-img1.png"
-                classe="img-thumbnail bg-transparent border-0 " titulo="Foto do Card"></foto>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <button type="button" class="btn btn-outline-dark"><i class="fas fa-eye"></i></button>
-                <button type="button" class="btn btn-outline-primary"><i class="fas fa-edit"></i></button>
-                <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i></button>
+
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Informações Sobre o Caso</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <foto url="https://www.caesonline.com/wp-content/uploads/2015/06/cao-abandonado.jpg"
+                    classe="img-thumbnail bg-transparent border-0 " titulo="Foto do Card">
+                </foto>
+
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Titulo</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                        else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">url</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">descrição</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>
-    <div class="col-md-3 col-12">
-        <div class="card bg-transparent text-right border-0 rounded shadow">
-            <foto url="http://wpthemecube.com/eventr_html/img/hotel-img1.png"
-                classe="img-thumbnail bg-transparent border-0 " titulo="Foto do Card"></foto>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <button type="button" class="btn btn-outline-dark"><i class="fas fa-eye"></i></button>
-                <button type="button" class="btn btn-outline-primary"><i class="fas fa-edit"></i></button>
-                <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i></button>
+</div>
+
+<!-- Modal Desativar-->
+<div class="modal fade" id="desativarModal" tabindex="-1" role="dialog" aria-labelledby="desativarModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <form novalidate ng-submit="inativarCaso(caso)">
+            <div class="modal-content bg-light text-dark">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="desativarModal">Desativar Caso</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="fas fa-exclamation-triangle text-warning display-4"></i>
+                    <br>
+                    <h3>Deseja Realmente Inativar Esse caso?</h3>
+                </div>
+                <div class="modal-footer">
+                    <input type="submit" class="btn btn-danger" placeholder="Sim">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Não</button>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="col-md-3 col-12">
-        <div class="card bg-transparent text-right border-0 rounded shadow">
-            <foto url="http://wpthemecube.com/eventr_html/img/hotel-img1.png"
-                classe="img-thumbnail bg-transparent border-0 " titulo="Foto do Card"></foto>
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <button type="button" class="btn btn-outline-dark"><i class="fas fa-eye"></i></button>
-                <button type="button" class="btn btn-outline-primary"><i class="fas fa-edit"></i></button>
-                <button type="button" class="btn btn-outline-danger"><i class="fas fa-trash"></i></button>
-            </div>
-        </div>
+        </form>
     </div>
 </div>
