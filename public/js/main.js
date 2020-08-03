@@ -22,7 +22,7 @@ angular.module('bethehero', ['myDirectives', 'ngRoute', 'meusServicos', 'ui.mask
         });
         $routeProvider.when(routeIndex.perfil, {
             templateUrl: 'partials/perfil.html',
-            controller: 'IndexController'
+            controller: 'PerfilController'
         });
         $routeProvider.when(routeIndex.adm, {
             templateUrl: 'partials/adm.html',

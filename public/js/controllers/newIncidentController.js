@@ -1,4 +1,4 @@
-angular.module('bethehero').controller('NewIncidentController', function ($scope, $routeParams, verify, getId, recursoIncident, cadastroDeIncident) {
+angular.module('bethehero').controller('NewIncidentController', function ($scope, $routeParams, $location, verify, getId, recursoIncident, cadastroDeIncident) {
     verify.teste
     $scope.incident = {}
     if ($routeParams.id) {
@@ -20,6 +20,7 @@ angular.module('bethehero').controller('NewIncidentController', function ($scope
 
         const get = getId
         usuario.ongId = get()
+
         cadastroDeIncident.cadastrar(usuario)
             .then(incident => {
                 const mensagem = incident.mensagem
@@ -30,6 +31,8 @@ angular.module('bethehero').controller('NewIncidentController', function ($scope
                     text: mensagem,
                     icon: 'success',
                 })
+
+                $location.path('home/incidents')
             })
             .catch(erro => {
                 const mensagem = erro.mensagem
