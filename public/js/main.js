@@ -7,6 +7,7 @@ angular.module('bethehero', ['myDirectives', 'ngRoute', 'meusServicos', 'ui.mask
             register: "/home/register",
             incidents: "/home/incidents",
             incident: "/incident/:id",
+            myIncients: "/home/myincident",
             newIncident: "/newIncident",
             perfil: "/home/perfil",
             adm: "/home/adm",
@@ -38,6 +39,10 @@ angular.module('bethehero', ['myDirectives', 'ngRoute', 'meusServicos', 'ui.mask
         });
         $routeProvider.when(routeIndex.incidents, {
             templateUrl: 'partials/incidents.html',
+            controller: 'IncidentsController'
+        });
+        $routeProvider.when(routeIndex.myIncients, {
+            templateUrl: 'partials/casosOng.html',
             controller: 'IncidentsController'
         });
         $routeProvider.when(routeIndex.incident, {
