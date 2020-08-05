@@ -9,7 +9,7 @@ angular.module('bethehero').controller('AdmController', function ($scope, $route
             cadastroDeOng.cadastrar(usuario)
                 .then(atualiza => {
                     const mensagem = atualiza.mensagem
-
+                    
                     // sweet alert
                     Swal.fire({
                         title: 'Ong:',
